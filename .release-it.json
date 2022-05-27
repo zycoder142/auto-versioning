@@ -1,0 +1,30 @@
+{
+  "git": {
+    "changelog": "git log --pretty=format:\"* %s (%h)\" ${latestTag}...HEAD",
+    "requireCleanWorkingDir": true,
+    "requireBranch": "main",
+    "requireUpstream": false,
+    "requireCommits": false,
+    "addUntrackedFiles": false,
+    "commit": true,
+    "commitMessage": "Release v${version}",
+    "commitArgs": [],
+    "tag": true,
+    "tagName": "v${version}",
+    "tagAnnotation": "Release v${version}",
+    "tagArgs": [],
+    "push": true,
+    "pushArgs": [
+      "--follow-tags"
+    ],
+    "pushRepo": "https://github.com/zycoder142/test-auto-versioning.git"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}",
+    "releaseNotes": null,
+    "tokenRef": "GITHUB_TOKEN",
+    "assets": null,
+    "origin": null
+  }
+}
